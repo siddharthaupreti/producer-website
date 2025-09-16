@@ -1,0 +1,515 @@
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f7fafc;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: horizontal;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .right-section{ 
+      margin-right: 100px;
+    }
+
+    .left-section {
+        margin-left: 100px;
+    }
+
+    .tabs{ 
+        display: grid;
+        grid-template-columns: 100px 150px 150px 100px;
+        column-gap: 15px;
+        row-gap: 40px;
+    }
+
+
+
+    /* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .left-section {
+        margin-left: 10px;
+    }
+    .right-section{ 
+      margin-left:50px;
+      /* margin-right: 10px; */
+      font-size: 10px;
+    }
+     .tabs{ 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 15px;
+        row-gap: 40px;
+    }
+  .itme{
+    font-size: 20px;}
+}
+
+
+    
+
+  a{
+    text-decoration: none;
+    color: #000; /* This will change the text color to black */
+  }
+
+  /* Base styles */
+a {
+  text-decoration: none;
+  color: #000; /* This will change the text color to black */
+  transition: text-shadow 0.3s ease-out;
+}
+
+/* Hover styles */
+a:hover {
+  text-shadow: 0 0 10px rgba(99, 99, 99, 0.7); /* A subtle purple glow */
+}
+
+
+.main-photo{ 
+  width: 50%;
+}
+
+.main{ 
+  display: flex;
+  /* flex-direction: horizontal; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 50px; 
+}
+
+.main-title{ 
+  font-weight: normal;
+}
+
+.producerSid{ 
+  font-weight: bold;
+}
+
+.main-photo{
+  margin-left: 20px;
+}
+
+.main-title2{ 
+  font-size: 100px;
+}
+/* .main-image{
+  display: inline;
+} */
+
+/* .main-image{
+  display: flex;
+  flex-direction: right;
+} */
+ .productions-section{
+  padding: 100px;
+  background-image: url('Photos/background-image2.png');
+  background-repeat: no-repeat;       /* Prevents tiling */
+  background-size: cover;             /* Makes it cover the whole div */
+  background-position: center; 
+  height: 900px;
+
+ }
+
+ .MyProductionsDescription{
+  font-size: 50px;
+ }
+ 
+
+
+
+ .card-grid-container{ 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px,1fr ));
+  gap: 30px; 
+  justify-content: center;
+ }
+ /* Styling for an individual card */
+.production-card {
+  background-color: #fff;
+  border-radius: 15px; /* Creates the rounded corners */
+  overflow: hidden; /* Keeps content within the rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.production-card:hover {
+  transform: translateY(-10px); /* Lifts the card on hover */
+}
+
+/* Styling for the image and play button */
+.card-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Creates a perfect square for the image area */
+  overflow: hidden;
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  /* background-col or: rgba(0, 0, 0, 0.6); */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s;
+}
+
+.card-image-container:hover .play-button-overlay {
+  opacity: 1; /* Make visible on hover */
+}
+
+.play-button-overlay img {
+  width: 100px;
+  /* filter: invert(1);  */
+  /* Makes the icon white */
+}
+
+/* Styling for the text information */
+.card-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.productions-section{
+    padding: 20px;
+    height:1500px;
+  }
+
+ @media (max-width: 1200px){
+  .productions-section{
+    padding: 20px;
+    height:1500px;
+  }
+
+  .main-title2{
+      font-size: 70px; /* Reduce font size on smaller screens */
+    }
+   .MyProductionsDescription{ 
+      font-size: 40px;
+    }
+
+}
+
+@media (max-width: 992px){
+  .productions-section{
+    padding: 20px;
+    height:1500px;
+  }
+
+  .main-title2{
+      font-size: 70px; /* Reduce font size on smaller screens */
+    }
+   .MyProductionsDescription{ 
+      font-size: 40px;
+    }
+
+}
+
+@media (max-width: 822px){
+  .productions-section{
+    padding: 20px;
+    height:2200px;
+  }
+
+  .main-title2{
+      font-size: 70px; /* Reduce font size on smaller screens */
+    }
+   .MyProductionsDescription{ 
+      font-size: 40px;
+    }
+
+}
+
+     
+@media (max-width: 480px) {
+
+    .productions-section{
+    padding: 20px;
+    height:1500px;
+  }
+
+  .main-title{
+    font-size: 20px;
+  }
+  .main-photo{ 
+  width: 50%;
+}
+
+.main-title2{
+      font-size: 30px; /* Reduce font size on smaller screens */
+    }
+
+    .MyProductionsDescription{ 
+      font-size: 20px;
+    }
+
+  .card-grid-container{ 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr ));
+  gap: 30px; 
+  justify-content: center;
+ }}
+ 
+ @media (max-width: 380px) {
+
+    .productions-section{
+    padding: 20px;
+    height:3500px;
+  }
+
+  .main-title{
+    font-size: 20px;
+  }
+  .main-photo{ 
+  width: 50%;
+}
+
+.main-title2{
+      font-size: 30px; /* Reduce font size on smaller screens */
+    }
+
+    .MyProductionsDescription{ 
+      font-size: 20px;
+    }
+
+  .card-grid-container{ 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(150px,1fr ));
+  gap: 30px; 
+  justify-content: center;
+ }}
+ 
+
+ 
+
+/* Styling for the entire collaborations section */
+.collaborations-section {
+  padding: 80px 20px; /* More vertical padding */
+  background-color: #f8f8f8; /* A subtle background color */
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  margin-bottom: 50px; /* More space below the intro */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+}
+
+/* Styling for the collaboration cards container using CSS Grid */
+.collaboration-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust card size */
+  gap: 30px; /* Space between the cards */
+  justify-content: center;
+  max-width: 1200px; /* Limit overall width */
+  margin: 0 auto; /* Center the grid container itself */
+}
+
+/* Styling for an individual collaboration card */
+.collaboration-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08); /* Stronger shadow */
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.collaboration-card:hover {
+  transform: translateY(-12px); /* Lifts higher on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.collaboration-logo {
+  width: 100px; /* Size of the logo/image */
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%; /* Make it round if it's a profile pic */
+  margin-bottom: 20px;
+  border: 3px solid #8a2be2; /* Accent border */
+  padding: 3px;
+}
+
+.collaboration-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.collaboration-card h4 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #8a2be2; /* Accent color for role */
+  margin-bottom: 15px;
+}
+
+.collaboration-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.collaboration-link {
+  display: inline-block; /* Allows padding and margin */
+  background-color: #8a2be2; /* Button background */
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.collaboration-link:hover {
+  background-color: #5d3fd3; /* Darker on hover */
+}
+
+
+@media (max-width: 768px) {
+  /* Styling for the collaboration cards container using CSS Grid */
+.collaboration-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Adjust card size */
+  gap: 30px; /* Space between the cards */
+  justify-content: center;
+  max-width: 1200px; /* Limit overall width */
+  margin: 0 auto; /* Center the grid container itself */
+}
+
+}
+
+/* Styling for the entire contact section */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #eef2f6; /* A very light blue/gray background */
+  text-align: center;
+}
+
+.contact-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-header p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+}
+
+/* Flex container for form and details */
+.contact-content-wrapper {
+  justify-content: center;
+  gap: 40px; /* Space between the form and details */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* Styling for contact details and social links */
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  text-align: center; /* Center content within this box */
+}
+
+.contact-details h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.social-links {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center; /* Center the icons */
+  gap: 20px; /* Space between icons */
+}
+
+.social-icon img {
+  width: 45px; /* Size of social media icons */
+  height: 45px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon img:hover {
+  transform: translateY(-5px); /* Lift icon on hover */
+}
+
+.direct-contact p a {
+  color: #8a2be2; /* Link color for email */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.direct-contact p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-details{
+    width: 50%;
+    min-width: 280px;
+  }
+}
